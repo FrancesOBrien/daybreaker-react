@@ -12,14 +12,15 @@ export default function EditTask(){
         .then(res => setData(res.data))
     }, [])
 
-    const editTheTask = (e) => {
-        e.preventDefault();
+    const editTheTask = e => {
+        e.preventDefault()
+        console.log(data)
         const updatedTask = {
             task: e.target.task.value,
             category: e.target.category.value,
             details: e.target.details.value,
             points: e.target.points.value,
-            isComplete: false,
+            isComplete: e.target.isComplete.checked
         }
 
 
@@ -31,11 +32,12 @@ export default function EditTask(){
 
     return(
         <div>
-            <form onSubmit={editTheTask()}>
+            <form onSubmit={editTheTask}>
                 task:<input type='text' name='task' defaultValue={data.task}/>
                 categroy:<input type='text' name='category' defaultValue={data.category}/>
                 details:<input type='text' name='details' defaultValue={data.details}/>
                 points:<input type='text' name='points' defaultValue={data.points}/>
+                complete: <input type='checkbox' name='isComplete' defaultChecked={data.isComplete}/>
                 <input type='submit' />
             </form>
         </div>

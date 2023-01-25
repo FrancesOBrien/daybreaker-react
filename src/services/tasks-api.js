@@ -1,7 +1,7 @@
 //All endpoints
 import axios from 'axios'
-// const baseURL = 'http://localhost:3001/tasks'
-const baseURL = 'https://daily-tasks-if3o.onrender.com/tasks'
+const baseURL = 'http://localhost:3001/tasks'
+// const baseURL = 'https://daily-tasks-if3o.onrender.com/tasks'
 
 //Show All
 export const getTasks = () => {
@@ -19,7 +19,7 @@ export const getTask = (id) => {
 
 //Edit the Task
 export const editTask = (id, updateTask) => {
-    const URL = `${baseURL}${id}`
+    const URL = `${baseURL}/${id}`
     const response = axios.put(URL, updateTask)
     return response
 }

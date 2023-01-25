@@ -7,7 +7,7 @@ import Tasks from './components/Tasks'
 function App() {
   return (
     <div className="App">
-      Task listen
+      <h2>Daily Tasks</h2>
       <Router>
         <Routes>
           <Route path='/' element={<Tasks />}/>
