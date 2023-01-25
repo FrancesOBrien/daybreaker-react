@@ -16,7 +16,7 @@ export default function Tasks() {
             {tasks.length > 0 ? <ul>
                 {tasks.map((task) => {
                     return(
-                        <li><a href={`/${task._id}`}>{task.task}</a></li>
+                        <li><Link to={`/${task._id}`}>{task.task}</Link></li>
                     )
                 })}
             </ul> : <div></div>}
