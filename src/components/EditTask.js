@@ -5,11 +5,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 export default function EditTask(){
     const {id} = useParams()
     const nav = useNavigate()
-    const [daily, setDaily] = useState({})
+    const [data, setData] = useState({})
 
     useEffect(() => {
         getTask(id)
-        .then(res => setDaily(res.daily))
+        .then(res => setData(res.data))
     }, [])
 
     const editTheTask = e => {
@@ -21,17 +21,18 @@ export default function EditTask(){
             points: e.target.points.value,
             isComplete: false,
         }
-        editTask(id, updatedTask)
-        nav(`/${id}`)
+        editTask(id, updatedTask).then( () => {
+            nav(`/${id}`)
+        })
     }
 
     return(
         <div>
             <form onSubmit={editTheTask}>
-                task:<input type='text' name='task' defaultValue={daily.task}/>
-                categroy:<input type='text' name='category' defaultValue={daily.category}/>
-                details:<input type='text' name='details' defaultValue={daily.details}/>
-                points:<input type='text' name='points' defaultValue={daily.points}/>
+                task:<input type='text' name='task' defaultValue={data.task}/>
+                categroy:<input type='text' name='category' defaultValue={data.category}/>
+                details:<input type='text' name='details' defaultValue={data.details}/>
+                points:<input type='text' name='points' defaultValue={data.points}/>
                 <input type='submit' />
             </form>
         </div>

@@ -8,7 +8,7 @@ export default function Task() {
     const [task, setTask] = useState({})
     useEffect(() => {
         getTask(id)
-        .then(res => setTask(res.daily))
+        .then(res => setTask(res.data))
     }, [])
 
     const deleteTheTask = () => {
@@ -18,14 +18,18 @@ export default function Task() {
 
     return(
         <div>
-            <h1>Welcome to this mess</h1>
+            <h1>Do this one thing</h1>
             <h2>{task.task}</h2>
             <h4>{task.category}</h4>
             <h3>{task.details}</h3>
             <h2>{task.points}</h2>
-            <h4>Complete?</h4>
-            {task.isComplete === true ?
-            (<input type='checkbox' checked></input>) : (<input type='checkbox'></input>)}
+            <h4>Completed: <input type='checkbox' defaultChecked={task.complete} /></h4>
+            <br/>
+            <button onClick={() => {nav(`/${id}/edit`)}}>Edit</button>
+            <button onClick={deleteTheTask}>Delete</button>
+            <button onClick={() => {nav(`/`)}}>Main</button>
+            {/* {task.isComplete === true ?
+            (<input type='checkbox' checked></input>) : (<input type='checkbox'></input>)} */}
         </div>
     )
 

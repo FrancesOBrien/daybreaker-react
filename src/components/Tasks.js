@@ -6,19 +6,21 @@ export default function Tasks() {
     const [tasks, setTasks] = useState([])
     useEffect(() => {
         getTasks()
-        .then(res => setTasks(res.daily))
-    }, [])
-    console.log(tasks)
+        .then(res => {
+            setTasks(res.data)
+    })
+ }, [])
 
     return(
         <div>
-            <ul>
+            {tasks.length > 0 ? <ul>
                 {tasks.map((task) => {
                     return(
                         <li><a href={`/${task._id}`}>{task.task}</a></li>
                     )
                 })}
-            </ul>
+            </ul> : <div></div>}
+            <Create />
         </div>
     )
 }

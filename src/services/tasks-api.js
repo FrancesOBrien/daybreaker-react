@@ -5,7 +5,7 @@ const baseURL = 'http://localhost:3001/tasks'
 //Show All
 export const getTasks = () => {
     const URL = baseURL
-    const response = aioxs.get(URL)
+    const response = axios.get(URL)
     return response
 }
 
@@ -19,7 +19,7 @@ export const getTask = (id) => {
 //Edit the Task
 export const editTask = (id, updateTask) => {
     const URL = `${baseURL}${id}`
-    const response = axios.put(URL, updatedTask)
+    const response = axios.put(URL, updateTask)
     return response
 }
 

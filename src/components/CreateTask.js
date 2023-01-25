@@ -12,8 +12,9 @@ function Create() {
             points: e.target.points.value,
             isComplete: false,
         }
-        createTask(task)
-        nav('/')
+        createTask(task).then( () => {
+            nav('/')
+        })
     }
 
     return(
