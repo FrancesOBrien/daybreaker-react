@@ -1,3 +1,12 @@
+
+Back-end repo on GitHub for this project can be found at:
+https://github.com/FrancesOBrien/daybreaker-express.git
+
+View this project live on Render:
+https://daily-tasks-react.onrender.com/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
