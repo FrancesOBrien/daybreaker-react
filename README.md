@@ -28,7 +28,12 @@ Node.js
 Javascript
 and some junior-dev-level grit and resilience
 
-Thank you for reading, and I wish you success in the pursuit of your goals.
+## Appreciations to Per Scholas Cycle 28! 
+Tishana and Kasper, my enduring appreciation for your work and support and tough love throughout this Bootcamp!
+Thanks also to Gary for Render support and guidance!
+Huge thanks to every learner in Cycle 28--you made it a party! 
+
+Thank you for reading, and I wish YOU success in the pursuit of your goals.
 
 
 # Getting Started with Create React App

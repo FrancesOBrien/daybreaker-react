@@ -12,8 +12,7 @@ export default function Task() {
     }, [])
 
     const deleteTheTask = () => {
-        deleteTask(id)
-        nav('/')
+        deleteTask(id).then(() => nav('/'))
     }
 
     return(
