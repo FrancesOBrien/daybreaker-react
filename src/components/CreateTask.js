@@ -19,14 +19,15 @@ function Create() {
 
     return(
         <div>
-            <h4>Add A Task!</h4>
+            {/* <section> */}
+            <h4 class='title is-3 has-text-warning-dark'>Add A Task!</h4>
             <form onSubmit={createTheTask}>
-                <input type='text' name='task'/>
-                <input type='text' name='category'/>
-                <input type='text' name='details'/>
-                <input type='text' name='points'/>
-                <input type='submit'/>
+                <input class="input" type='text' name='task' placeholder="TASK"/>
+                <input class="input" type='text' name='category' placeholder="CATEGORY"/>
+                <input class="input" type='text' name='details' placeholder="DETAILS"/>
+                <input class="button is-warning" type='submit'/>
             </form>
+            {/* </section> */}
         </div>
     )
 }

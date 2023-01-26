@@ -14,14 +14,24 @@ export default function Tasks() {
 
     return(
         <div>
+            <section class="subtitle">
             {tasks.length > 0 ? <ul>
-                {tasks.map((task) => {
+                {tasks.sort((a, b) => b.category.localeCompare(a.category)).map((task) => {
                     return(
-                        <div><Link to={`/${task._id}`}>{task.task}</Link></div>
+                        <li class="subtitle">
+                            <label class="checkbox">
+                                    <input type="checkbox"></input>
+                            </label>
+                            <Link to={`/${task._id}`}>
+                                {task.category} : {task.task}
+                            </Link>
+                        </li>
                     )
                 })}
             </ul> : <div></div>}
+            <br/>
             <Create />
+            </section>
         </div>
     )
 }

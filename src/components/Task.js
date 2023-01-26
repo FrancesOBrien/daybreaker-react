@@ -17,19 +17,20 @@ export default function Task() {
     }
 
     return(
-        <div>
-            <h1>Do this one thing</h1>
-            <h2>{task.task}</h2>
-            <h4>{task.category}</h4>
-            <h3>{task.details}</h3>
-            <h2>{task.points}</h2>
-            <h4>Completed: <input type='checkbox' defaultChecked={task.complete} /></h4>
-            <br/>
-            <button onClick={() => {nav(`/${id}/edit`)}}>Edit</button>
-            <button onClick={deleteTheTask}>Delete</button>
-            <button onClick={() => {nav(`/`)}}>Main</button>
-            {/* {task.isComplete === true ?
-            (<input type='checkbox' checked></input>) : (<input type='checkbox'></input>)} */}
+        <div class="ambient has-background-success-light">
+        <article class="message">
+            <div class="message-header has-background-warning-dark">
+                <p>Do this one thing: {task.task}</p>
+                <button class="delete" aria-label="delete" onClick={() => {nav(`/`)}}></button>
+            </div>
+            <div class="message-body has-background-warning-light">
+                {task.details}
+            </div>
+            <div>
+                <button class="button" onClick={() => {nav(`/${id}/edit`)}}>Edit Task</button>
+                <button class="button" onClick={deleteTheTask}>Remove Task</button>
+            </div>
+        </article>
         </div>
     )
 

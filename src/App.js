@@ -6,8 +6,10 @@ import Tasks from './components/Tasks'
 
 function App() {
   return (
-    <div className="App">
-      <h2>Daily Tasks</h2>
+      <div class="something has-background-success-light">
+      <section class='hero'>
+        <div class='hero-body'>
+      <h1 class='title is-1 has-text-primary-dark'>Daily Tasks</h1>
       <Router>
         <Routes>
           <Route path='/' element={<Tasks />}/>
@@ -15,8 +17,11 @@ function App() {
           <Route path='/:id/edit' element={<EditTask />}/>
         </Routes>
       </Router>
-
+      </div>
+    </section>
     </div>
+
+
   );
 }
 

@@ -19,7 +19,6 @@ export default function EditTask(){
             task: e.target.task.value,
             category: e.target.category.value,
             details: e.target.details.value,
-            points: e.target.points.value,
             isComplete: e.target.isComplete.checked
         }
 
@@ -36,7 +35,6 @@ export default function EditTask(){
                 task:<input type='text' name='task' defaultValue={data.task}/>
                 categroy:<input type='text' name='category' defaultValue={data.category}/>
                 details:<input type='text' name='details' defaultValue={data.details}/>
-                points:<input type='text' name='points' defaultValue={data.points}/>
                 complete: <input type='checkbox' name='isComplete' defaultChecked={data.isComplete}/>
                 <input type='submit' />
             </form>

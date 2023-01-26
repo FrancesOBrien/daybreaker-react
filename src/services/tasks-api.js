@@ -1,7 +1,8 @@
 //All endpoints
 import axios from 'axios'
-const baseURL = 'http://localhost:3001/tasks'
-// const baseURL = 'https://daily-tasks-if3o.onrender.com/tasks'
+// const baseURL = 'http://localhost:3001/tasks'
+const baseURL = 'https://daily-tasks-if3o.onrender.com/tasks'
+// comment out render URL const and uncomment localhost to edit using npm
 
 //Show All
 export const getTasks = () => {
