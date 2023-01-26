@@ -1,10 +1,34 @@
+# This project is deployed on Render
 
 Back-end repo on GitHub for this project can be found at:
 https://github.com/FrancesOBrien/daybreaker-express.git
 
 View this project live on Render:
 https://daily-tasks-react.onrender.com/
+https://daily-tasks-if3o.onrender.com/tasks
 
+**Please note: this project is hosted on the free tier of Render, and as such it may take a minute to load if it hasn't been accessed in a while. Free Render lets applications go dormant when they are not in use.**
+
+## DayBreaker is a simple Daily Task organizer
+It's main objective is to provide a minimally worded task list upon loading, with checkboxes for completing tasks. From the landing page, the user can click on each item in the task list for further details or create a new task to add to the list.
+Clicking on a task brings the user to that task's details, and the option to edit or delete the task.
+Tasks are organized alphabetically by Category.
+
+Updates I am willing to entertain to this app:
+ability to have recurring tasks
+randomized words of encouragement included on the Show route
+links to supporting webpages (ie, LinkedIn button on a Networking task)
+
+
+### Technologies used to create this project include:
+MongoDB and Mongoose
+Express
+React
+Node.js
+Javascript
+and some junior-dev-level grit and resilience
+
+Thank you for reading, and I wish you success in the pursuit of your goals.
 
 
 # Getting Started with Create React App
