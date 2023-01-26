@@ -9,7 +9,6 @@ function Create() {
             task: e.target.task.value,
             category: e.target.category.value,
             details: e.target.details.value,
-            points: e.target.points.value,
             isComplete: false,
         }
         createTask(task).then( () => {
